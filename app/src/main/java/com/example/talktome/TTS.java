@@ -1,7 +1,12 @@
 package com.example.talktome;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
 import android.speech.tts.TextToSpeechService;
@@ -11,11 +16,16 @@ import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.spark.submitbutton.SubmitButton;
+
 import java.util.Locale;
+
+import static com.example.talktome.R.color.colorPrimary;
 
 public class TTS extends AppCompatActivity {
     EditText inputText;
-    Button buttonConvert, buttonClear;
+    Button buttonClear;
+    SubmitButton buttonConvert;
     WebView webView;
 
     TextToSpeech textToSpeech;
@@ -24,6 +34,12 @@ public class TTS extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_t_t_s);
+        ActionBar actionBar;
+        actionBar = getSupportActionBar();
+        ColorDrawable colorDrawable = new ColorDrawable(Color.parseColor("#400082"));
+
+        // Set BackgroundDrawable
+        actionBar.setBackgroundDrawable(colorDrawable);
 
         inputText=findViewById(R.id.input);
         buttonClear=findViewById(R.id.clearbutton);
@@ -59,6 +75,7 @@ public class TTS extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 inputText.setText("");
+                buttonClear.setBackgroundResource(R.drawable.bg_round1);
             }
         });
     }

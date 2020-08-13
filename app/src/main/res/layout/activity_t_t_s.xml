@@ -24,51 +24,47 @@
         android:lines="5"
         android:background="@drawable/bg_round"/>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:orientation="horizontal">
 
-<!--        <com.spark.submitbutton.SubmitButton-->
+
+<!--        <Button-->
 <!--            android:id="@+id/convertButton"-->
-<!--            android:layout_width="97dp"-->
-<!--            android:layout_height="match_parent"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
 <!--            android:layout_weight="1"-->
 <!--            android:background="@drawable/bg_round"-->
-<!--            android:gravity="center"-->
 <!--            android:text="CONVERT"-->
-<!--            android:textStyle="bold"-->
-<!--            android:textAlignment="center"-->
-<!--            android:textColor="@color/gray"-->
-<!--            app:sub_btn_background="@color/white"-->
-<!--            app:sub_btn_duration="3000"-->
-<!--            app:sub_btn_line_color="@android:color/holo_blue_dark"-->
-<!--            app:sub_btn_ripple_color="@android:color/holo_blue_dark"-->
-<!--            app:sub_btn_tick_color="@color/white" />-->
+<!--            android:textColor="@color/gray" />-->
+    <com.spark.submitbutton.SubmitButton
+        android:id="@+id/convertButton"
+        android:layout_width="345dp"
+        android:layout_height="132dp"
+        android:text="CONVERT"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:sub_btn_background="@color/white"
+        app:sub_btn_duration="2000"
+        app:sub_btn_line_color="@color/button"
+        app:sub_btn_ripple_color="@color/button"
+        app:sub_btn_tick_color="@color/white" />
 
-        <Button
-            android:id="@+id/convertButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@drawable/bg_round"
-            android:text="CONVERT"
-            android:textColor="@color/gray" />
+    <Button
+        android:id="@+id/clearbutton"
+        android:layout_width="162dp"
+        android:layout_height="58dp"
+        android:background="@drawable/bg_round"
+        android:text="Clear"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.921"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <Space
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
 
-        <Button
-            android:id="@+id/clearbutton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@drawable/bg_round"
-            android:text="Clear"
-            android:textColor="@color/gray" />
-
-    </LinearLayout>
 
 </LinearLayout>
